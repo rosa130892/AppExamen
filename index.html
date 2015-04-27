@@ -21,7 +21,7 @@ $(document).ready(function inicio(){
   var cod=$("#codigo_barras").val();
     $.ajax({
     type:"POST",
-    url:"insertarMedicamento.php",
+    url:"http://rosaisc.260mb.net/insertarMedicamento.php",
     data:"nombre= "+nom+" &precio= "+ pre +" &marca= "+ mar +" &codigo_barras= "+ cod ,
     success: registro
     });
@@ -55,7 +55,7 @@ $(document).ready(function inicio(){
   var valConsulta=$("#valConsulta").val();
     $.ajax({
       type:"POST",
-      url:"buscarMedicamento.php",
+      url:"http://rosaisc.260mb.net/buscarMedicamento.php",
       data:"Id="+valConsulta,
       success: ConsultaMedicamentos
     });
@@ -72,7 +72,7 @@ var btnConsAct=$("#btnConsActMedicamento");
   btnConsAct.click(function CargarDatosMedicamentos(){  
     $.ajax({
     type:"POST",
-    url:"consultarMedicamento.php",
+    url:"http://rosaisc.260mb.net/consultarMedicamento.php",
     data:"",
     success: CargarDatosMedicamentos
     });
@@ -90,7 +90,7 @@ var btnConsAct=$("#btnConsActMedicamento");
   var Id=parseInt($("#idAcualizar").val());
     $.ajax({
     type:"POST",
-    url:"buscarMedicamento.php",
+    url:"http://rosaisc.260mb.net/buscarMedicamento.php",
     data:"Id="+Id,
     success: cargarDatosAct
     });
@@ -136,7 +136,7 @@ var btnConsAct=$("#btnConsActMedicamento");
       }else{
 	$.ajax({
 	  type:"POST",
-	  url:"actualizarMedicamento.php",
+	  url:"http://rosaisc.260mb.net/actualizarMedicamento.php",
 	  data:" id= "+id+" &nombre="+nombre+" &precio= "+precio+" &marca= "+marca+" &codigo_barras= "+codigo_barras,
 	  success: actualizacionMedicamentos
 	});
@@ -153,7 +153,7 @@ var btnConsAct=$("#btnConsActMedicamento");
    btnConsEliminar.click(function EliminarRegistroMedicamento(){
     $.ajax({
     type:"POST",
-    url:"consultarMedicamento.php",
+    url:"http://rosaisc.260mb.net/consultarMedicamento.php",
     data:"",
     success: CDEliminarMedicamento
     });
@@ -171,7 +171,7 @@ var btnConsAct=$("#btnConsActMedicamento");
     var IdEliminar=parseInt($("#IdEliminarMedicamento").val());
       $.ajax({
     type:"POST",
-    url:"eliminarMedicamento.php",
+    url:"http://rosaisc.260mb.net/eliminarMedicamento.php",
     data:"Id="+IdEliminar,
     success: Eliminacion
     });
@@ -226,7 +226,7 @@ var btnConsAct=$("#btnConsActMedicamento");
   var mun=$("#muni").val();
     $.ajax({
     type:"POST",
-    url:"insertarEmpleado.php",
+    url:"http://rosaisc.260mb.net/insertarEmpleado.php",
     data:"nom= "+nom+" &apellidop= "+ app +" &apellidom= "+ apm +" &direc= "+ dir +" &muni= "+ mun ,
     success: registro2
     });
@@ -260,7 +260,7 @@ var btnConsAct=$("#btnConsActMedicamento");
   var valConsultaEmp=$("#valConsulta2").val();
     $.ajax({
       type:"POST",
-      url:"buscarEmpleado.php",
+      url:"http://rosaisc.260mb.net/buscarEmpleado.php",
       data:"Id="+valConsultaEmp,
       success: ConsultaEmpleado
     });
@@ -277,7 +277,7 @@ var btnConsAct=$("#btnConsActMedicamento");
   btnConsAct2.click(function CargarDatosEmpleados(){  
     $.ajax({
     type:"POST",
-    url:"consultarEmpleado.php",
+    url:"http://rosaisc.260mb.net/consultarEmpleado.php",
     data:"",
     success: CargarDatosEmpleado
     });
@@ -295,7 +295,7 @@ var btnConsAct=$("#btnConsActMedicamento");
   var Id=parseInt($("#idAcualizarEmp").val());
     $.ajax({
     type:"POST",
-    url:"buscarEmpleado.php",
+    url:"http://rosaisc.260mb.net/buscarEmpleado.php",
     data:"Id="+Id,
     success: cargarDatosAct2
     });
@@ -346,7 +346,7 @@ var btnConsAct=$("#btnConsActMedicamento");
       }else{
 	$.ajax({
 	  type:"POST",
-	  url:"actualizarEmpleado.php",
+	  url:"http://rosaisc.260mb.net/actualizarEmpleado.php",
 	  data:" id= "+id+" &nombre="+nombre+" &appat= "+appat+" &apmat= "+apmat+" &direccion= "+direccion+" &municipio= "+municipio,
 	  success: actualizacionEmpleado
 	});
@@ -363,7 +363,7 @@ var btnConsAct=$("#btnConsActMedicamento");
    btnConsEliminar.click(function EliminarRegistroMedicamento(){
     $.ajax({
     type:"POST",
-    url:"consultarEmpleado.php",
+    url:"http://rosaisc.260mb.net/consultarEmpleado.php",
     data:"",
     success: CDEliminarMedicamento
     });
@@ -381,7 +381,7 @@ var btnConsAct=$("#btnConsActMedicamento");
     var IdEliminar=parseInt($("#IdEliminarEmpleado").val());
       $.ajax({
     type:"POST",
-    url:"eliminarEmpleado.php",
+    url:"http://rosaisc.260mb.net/eliminarEmpleado.php",
     data:"Id="+IdEliminar,
     success: EliminacionEmpleado
     });
